@@ -1,0 +1,218 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+    background: url(../image/fon.jpg) no-repeat center/cover;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(22, 21, 21, 0.5) 100%/100%;
+
+}
+
+.container {
+    width: 496px;
+    height: 760px;
+    backdrop-filter: blur(10px);
+    background: rgba(233, 233, 233, 0.25);
+    margin-left: auto;
+    color: #ffffff;
+    padding: 60px 78px 0;
+    font-size: 12px;
+}
+
+
+/* swich */
+.switch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    border: 1px solid #153416;
+    border-radius: 30px;
+    width: 340px;
+    height: 36px;
+    margin-bottom: 75px;
+}
+
+.switch_input {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.switch_label {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    width: 100%;
+    height: 52px;
+}
+
+.switch_span {
+    color: #ffffff;
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.switch_label::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 168px;
+    height: 32px;
+    background: url(../image/fon_swich.png);
+    transition: all .3s linear;
+}
+
+.switch_input:checked+.switch_label::before {
+    left: calc(100% - 168px);
+}
+
+/* Form */
+
+.form {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 29px;
+}
+
+.input {
+    width: 100%;
+    border-radius: 30px;
+    height: 44px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background: #929191;
+}
+
+.input::placeholder {
+    color: #ffffff;
+}
+
+/*  Запам'ятати мене Забули пароль? */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.options input {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.options label {
+    position: relative;
+    padding: 5px 5px 5px 20px;
+}
+
+.options label::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.options input:checked+label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3px;
+    width: 9px;
+    height: 15px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    border-radius: 3px;
+    transform: rotate(38deg);
+}
+
+.options input:focus+label::before {
+    background-color: #153416;
+    border: #153416;
+}
+
+/* Кнопка Увійти */
+.button {
+    border-radius: 30px;
+    width: 100%;
+    height: 44px;
+    background: #153416;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.register {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.register p {
+    text-align: center;
+    color: #153416;
+}
+
+.register a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #fff;
+}
+
+/* Icon */
+.social {
+    text-align: center;
+    color: #153416;
+    margin-bottom: 20px;
+}
+
+.social_nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social_icon {
+    width: 24px;
+    height: 24px;
+    fill: #153416
+}

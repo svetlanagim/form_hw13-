@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Вхід</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="container ">
+            <div class="switch">
+                <input class="switch_input" type="checkbox" id="switch">
+                <label class="switch_label" for="switch">
+                    <span class="switch_span">Вхід</span>
+                    <span class="switch_span">Реєстрація</span>
+                </label>
+            </div>
+
+            <form class="form" action="#">
+                <h1>Вхід</h1>
+                <input class="input" type="email" name="email" placeholder="Введіть E-mail" autocomplete="on">
+                <input class="input" type="password" name="password" placeholder="Пароль">
+                <div class="options">
+                    <input type="checkbox" id="remember"><label for="remember">
+                        Запам'ятати мене </label>
+                    <a href="#">Забули пароль?</a>
+
+                </div>
+                <button class="button">Увійти</button>
+                <div class="register">
+                    <p>Ще немає облікового запису?</p>
+                    <a href="#">Зареєструватись</a>
+                </div>
+
+                <p class="social">Або увійдіть через</p>
+                <div class="social_nav">
+                    <nav class="social_nav">
+                        <a href="#">
+                            <svg class="social_icon">
+                                <use href="./image/sprite.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="social_icon">
+                                <use href="./image/sprite.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg class="social_icon">
+                                <use href="./image/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </nav>
+                </div>
+
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>
